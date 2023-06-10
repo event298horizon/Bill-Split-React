@@ -12,10 +12,16 @@
     /* border: 1px solid red; */
     display: flex;
     gap: 10px;
+    padding:1.5rem;
+    border:none;
+    border-radius: 0.7rem;
+    background-image: url(boskf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .form {
-    width: 300px;
+    width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -24,6 +30,15 @@
 }
 .form input {
     height: 40px;
+    background-color: #DDE6ED;
+    border: none;
+    padding:0.5rem;
+    border-radius:0.2rem;
+
+}
+
+.form input::placeholder{
+    color: #27374D;
 }
 
 .tips {
@@ -31,19 +46,59 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
+
 }
 
 .tips input {
     width: 80px;
 
 }
-
-.tips input[type=button]:focus {
-    background: blue;
+.tips .tipsButton{
+    background-color:#ff00a2;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
+.tips .tipsButton:hover{
+    box-shadow: 7px 5px 56px -14px #ff47bbfe;
+}
+
+.tips .tipsButton:active{
+transform: scale(0.97);
+box-shadow: 7px 5px 56px -10px #ff47bb;
+}
+
+#resetButton{
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    border-radius: 9px;
+    background-color: #5d00a3;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    color:white;
+}
+
+#resetButton:hover{
+    box-shadow: 7px 5px 56px -14px #ca85ff;
+}
+
+#resetButton:active{
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #ca85ff;
+}
+
+
+
 .result {
-    border: 1px solid black;
+    border:none;
+    border-radius: 0.2rem;
     width: 300px;
+    background-color: #DDE6ED;
 
 }

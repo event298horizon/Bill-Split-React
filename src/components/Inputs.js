@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 const Input = ({ setInputTotal, setInputTip, setInputPeople }) => {
+  
   const inputTotalHandler = (e) => {
     setInputTotal(e.target.value);
     console.log(e.target.value);
@@ -25,21 +26,8 @@ const Input = ({ setInputTotal, setInputTip, setInputPeople }) => {
         type="number"
         placeholder="Enter total amount"
       />
-      <div className="tips">
-      <input type="button" value="5" />
-      <input type="button" value="10" />
-      <input type="button" value="15" />
-      <input type="button" value="20" />
-      <input type="button" value="25" />
-      <input
-        min={0}
-        onBlur={inputTipHandler}
-        type="number"
-        name=""
-        placeholder="Enter tip percentage"
-        id=""
-      />
-      </div>
+
+      
       <input
         min={0}
         onBlur={inputPeopleHandler}
@@ -48,7 +36,27 @@ const Input = ({ setInputTotal, setInputTip, setInputPeople }) => {
         placeholder="Enter number of people"
         id=""
       />
-      <button onClick={resetValue}>resetValues</button>
+
+
+      <div className="tips">
+
+      
+      <input type="button" value="5" onClick={inputTipHandler} className="tipsButton" />
+      <input type="button" value="10" onClick={inputTipHandler} className="tipsButton" />
+      <input type="button" value="15" onClick={inputTipHandler} className="tipsButton" />
+      <input type="button" value="20" onClick={inputTipHandler} className="tipsButton" />
+      <input type="button" value="25" onClick={inputTipHandler} className="tipsButton" />
+      <input
+        min={0}
+        onChange={inputTipHandler}
+        type="number"
+        name=""
+        placeholder="Enter tip percentage"
+        id=""
+      />
+      </div>
+     
+      <button onClick={resetValue} id="resetButton">Reset Value</button>
     </form>
   );
 };
