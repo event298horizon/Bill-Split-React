@@ -20,11 +20,13 @@ function App() {
       />
       <Result
         inputTotal={inputTotal}
-        inputTip={inputTip}
+        inputTip={inputTip}  //whaththehellwow
         inputPeople={inputPeople}
       />
     </div>
   );
+
+
 }
 
 export default App;
